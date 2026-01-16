@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arcade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hud">
+        <div id="game-title" class="title">Arcade</div>
+        <div class="stats">
+          <div>Score: <span id="score">0</span></div>
+          <div>Best: <span id="best">0</span></div>
+          <div>Lives: <span id="lives">-</span></div>
+        </div>
+      </header>
+
+      <section class="game">
+        <canvas id="game" width="480" height="480" aria-label="b Snake game"></canvas>
+        <div id="help" class="help">
+          <div><strong>Controls</strong>: Arrow keys / WASD</div>
+          <div><strong>Pause</strong>: Space</div>
+          <div><strong>Mute</strong>: M</div>
+          <div><strong>Restart</strong>: R</div>
+        </div>
+        <div id="menu" class="menu">
+          <div class="menu-card">
+            <div class="menu-brand">
+              <div class="menu-logo" aria-hidden="true">ARCADE</div>
+              <div class="menu-title">Choose a game</div>
+              <div class="menu-subtitle">Snake, Pac-Man, Tetris, and Breakout — all in one canvas</div>
+            </div>
+            <div class="menu-buttons">
+              <button id="btn-snake" class="btn btn-snake" type="button" data-game="snake">
+                <span class="btn-title">Snake</span>
+                <span class="btn-sub">Eat apples. Don’t crash.</span>
+              </button>
+              <button id="btn-pacman" class="btn btn-pacman" type="button" data-game="pacman">
+                <span class="btn-title">Pac-Man</span>
+                <span class="btn-sub">Chomp pellets. Dodge ghosts.</span>
+              </button>
+              <button id="btn-tetris" class="btn btn-tetris" type="button" data-game="tetris">
+                <span class="btn-title">Tetris</span>
+                <span class="btn-sub">Stack pieces. Clear lines.</span>
+              </button>
+              <button id="btn-breakout" class="btn btn-breakout" type="button" data-game="breakout">
+                <span class="btn-title">Breakout</span>
+                <span class="btn-sub">Smash bricks. Keep the ball alive.</span>
+              </button>
+            </div>
+            <div class="menu-hint">Tip: press <strong>Esc</strong> to return here.</div>
+          </div>
+        </div>
+        <div id="overlay" class="overlay" hidden>
+          <div class="overlay-card">
+            <div id="overlay-title" class="overlay-title">Game Over</div>
+            <div id="overlay-subtitle" class="overlay-subtitle">Press R to restart</div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">Open this file in your browser to play.</footer>
+    </main>
+
+    <script src="snake.js" defer></script>
+    <script src="pacman.js" defer></script>
+    <script src="tetris.js" defer></script>
+    <script src="breakout.js" defer></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
